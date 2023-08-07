@@ -1,0 +1,180 @@
+header{
+    height:100vh;
+    background-image: url(../assets/img/perfil-mobile.webp);
+    background-size: cover;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    .nombre{
+        width:100%;
+        padding: 1rem;
+        margin-bottom: 5%;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.3);
+        color: #f0f0f3;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        h1{
+            font-size: 3rem;
+            font-family: $tipografia-titulos;
+        }
+        p{
+            font-family: $tipografia-general;
+        }
+    }
+    #menu{
+        width:100%;
+        border-radius: 0.5rem;
+        .botonera{
+            @include cont_flex(column,center,center);
+            width: 80vw;
+            // height: 35vh;
+            padding: 1rem;   
+            margin-bottom: 1rem;
+            a{
+                text-decoration: none;
+                color: #f0f0f3;
+                font-weight: 500;
+            }
+            .bton_sobre_mi{
+                width: 25rem;
+                height: 4rem;
+                margin: 0.5rem;
+                padding: 1rem;
+                background-color: rgba(0, 0, 0,0.4);
+                border-radius: 1rem;
+                border: solid 1px floralwhite;
+                span{
+                    font-size: 1.5rem;
+                    text-transform: uppercase;
+                    padding: 1rem;
+                    letter-spacing: 3px;
+                    font-family: $tipografia-general; 
+                }
+                &:active{
+                   border: solid 1px #811e1e;
+                   color: #811e1e;
+                   background-color: aquamarine;
+                }
+            }
+            .bton_porfolio{
+                width: 25rem;
+                height: 4rem;
+                margin: 0.5rem;
+                padding: 1rem;
+                border-radius: 1rem;
+                border: solid 1px floralwhite;
+                background-color: rgba(0, 0, 0,0.4);
+                 span{
+                    font-size: 1.5rem;
+                    text-transform: uppercase;
+                    padding: 1rem;
+                    letter-spacing: 3px;
+                    font-family: $tipografia-general;  
+                }
+                &:active{
+                   border: solid 1px #811e1e;
+                   color: #811e1e;
+                   background-color: aquamarine;
+                }
+            }
+            .bton_contact{
+                width: 25rem;
+                height: 4rem;
+                margin: 0.5rem;
+                padding: 1rem;
+                border-radius: 1rem;
+                border: solid 1px floralwhite;
+                background-color: rgba(0, 0, 0,0.4);
+                span{
+                    font-size: 1.5rem;
+                    text-transform: uppercase;
+                    padding: 1rem;
+                    letter-spacing: 3px;
+                    font-family: $tipografia-general;  
+                }
+                &:active{
+                   border: solid 1px #811e1e;
+                   color: #811e1e;
+                   background-color: aquamarine;
+                }
+            }
+        }
+        .redes{
+            @include cont_flex(row,center,center);
+            width: 100%;
+            background-color: rgba(193, 193, 208,0.2);
+            i{
+                color: white;
+                font-size: 3rem;
+                margin:1rem;
+            }
+        }
+    }
+}
+// resposive
+    @include sm(){
+        header{
+            .nombre{
+                background-color: rgba(0, 0, 0, 0.3);
+                p{
+                    font-size: 1rem;
+                }
+            }
+            .menu{
+                .botonera{
+                    .bton_sobre_mi{
+                        width: 60vw;
+                }
+                .bton_porfolio{
+                    width: 60vw;
+                }
+            }
+        }
+    }
+}
+    @include lg(){
+    header{
+        background-image: url(../assets/img/perfil-desk.webp);
+        background-size: contain;
+        #menu{
+            .botonera{
+                flex-direction: row;
+                    .bton_sobre_mi{
+                        transition: $transition;
+                        &:hover{
+                        border-color:map-get($map: $colores-pagina, $key:hover);
+                        background-color: map-get($map: $colores-pagina, $key:terciario);
+                        }
+                    }
+                    .bton_porfolio{
+                        transition: $transition;
+                        &:hover{
+                        border-color:map-get($map: $colores-pagina, $key:hover);
+                        background-color: map-get($map: $colores-pagina, $key:terciario);
+                        }
+                    } 
+                    .bton_contact{
+                        transition: $transition;
+                        &:hover{
+                        border-color:map-get($map: $colores-pagina, $key:hover);
+                        background-color: map-get($map: $colores-pagina, $key:terciario);
+                        }
+                    }  
+            }
+            .redes{
+                a{
+                    i{
+                        font-size: 3rem;
+                        &:hover{
+                            filter: drop-shadow(1px 1px 5px #ECB365);
+                        }
+                    }
+                }
+              
+            }
+        }
+    }   
+}
+   

@@ -1,0 +1,136 @@
+main{
+    .porfolio{
+        background-image: linear-gradient(to top, #064663, #006173, #007b72, #4a9365, #8da558, #ae974c, #c68754, #d2786a, #a7586e, #704368, #383052, #041c32);
+        .hero{
+            width: 100%;
+            background-color: #00101c;
+            h2{
+                width: 100%;
+                height: 20vh;
+                // estilos
+                background-image: url(../assets/img/f_letrad.svg);
+                background-size: cover;
+                font-family: $tipografia-titulos;
+                font-weight: bold;
+                color: transparent;
+                font-size: 6rem;
+                text-transform: uppercase;
+                letter-spacing: 5px;
+                background-clip:text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+        
+        h4{
+            width: 100%;
+            color: #f0f0f3;
+            margin-top: 7rem;
+            text-transform: uppercase;
+            font-size: 2rem;
+            padding: 1rem;
+            letter-spacing: 5px;
+            hr{
+                width: 80%;
+                opacity: 1;
+            }
+        }
+        .carousel_retrato{
+            padding: 1rem;
+            #carouselExampleFade{
+                z-index: 0;
+                .carousel-inner{
+                    border-radius: 1rem;
+                    img{
+                        border-radius: 1rem;
+                    }
+                }
+                .carousel-control-prev{
+                    span{
+                        i{
+                            font-size: 3rem;
+                            border-radius: 50%;
+                            border: solid 0.5rem black;
+                        }
+                    }
+                }
+                .carousel-control-next {
+                    span{
+                        i{
+                            font-size: 3rem;
+                            border-radius: 50%;
+                            border: solid 0.5rem black;
+                        }
+                    }
+                }
+            }
+          } 
+      .carousel_paisaje{
+        margin-bottom: 7rem;
+        padding: 1rem;
+        #carouselExampleControls{
+            z-index: 0;
+            .carousel-inner{
+                border-radius: 1rem;
+                img{
+                    border-radius: 1rem;
+                }
+            }
+            .carousel-control-prev{
+                span{
+                    i{
+                        font-size: 3rem;
+                        border-radius: 50%;
+                        border: solid 0.5rem black;
+                    }
+                }
+            }
+            .carousel-control-next {
+                span{
+                    i{
+                        font-size: 3rem;
+                        border-radius: 50%;
+                        border: solid 0.5rem black;
+                    }
+                }
+            }
+        }
+      }  
+    }
+}
+// responsive
+@include sm(){
+    main{
+        .porfolio{
+            .hero{
+                h2{
+                    font-size: 4rem;
+                }
+            }
+            .galeria{
+                a{
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+@include lg (){
+    main{
+        .porfolio{
+            h3{
+                height: 30vh;
+            }
+            .galeria{
+                a{
+                    transition: all 200ms;
+                    &:hover{
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+}

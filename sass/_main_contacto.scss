@@ -1,0 +1,140 @@
+main{
+    #contacto{
+        background-image: linear-gradient(to top, #041c32, #153753, #265575, #367698, #4798bc);
+        .hero{
+            width: 100%;
+            background-color: #00101c;
+            margin-bottom: 5rem;
+            h2{
+                width: 100%;
+                height: 20vh;
+                // estilos
+                background-image: url(../assets/img/f_letrad.svg);
+                background-size: cover;
+                font-family: $tipografia-titulos;
+                font-weight: bold;
+                color: transparent;
+                font-size: 6rem;
+                text-transform: uppercase;
+                letter-spacing: 5px;
+                background-clip:text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+        .text_contacto{
+            width: 80%;
+            padding: 1rem;
+            border-radius: 1rem;
+            box-shadow: 5px 5px 10px black;
+            p{
+                color: map-get($map:$colores-pagina , $key:titulos);
+                font-family: $tipografia-titulos;
+                font-size: 2rem;
+                letter-spacing: 3px;
+                text-align: left;
+            }
+        }
+        .link_contacto{
+            margin: 2rem;
+            a{
+                text-decoration: none;
+                color: aliceblue;
+                margin: 1rem;
+            }
+            .bton_mail{
+                width: 20rem;
+                // border: solid 2px black;
+                border-radius: 5rem;
+                font-size: 3rem;
+                padding: 0.5rem;
+                background-image: linear-gradient(to right, #04293a, #042e41, #053449, #053950, #053f58, #004d63, #005c6d, #006a74, #278472, #629a65, #a4aa5a, #ecb365);
+                i{
+                    margin-right: 4rem;  
+                    background-color:map-get($map: $colores-pagina, $key:titulos);
+                    padding: 1rem;
+                    border-radius: 5rem;
+                    box-shadow: inset 1px 1px 10px #657e7e;
+                }
+                span{
+                    font-size: 2rem;
+                    margin-right:1rem;
+                    font-family: $tipografia-general;
+                }
+            }
+            .bton_wassap{
+                width: 20rem;
+                border-radius: 5rem;
+                padding: 0.5rem;
+                background-image: linear-gradient(to right, #04293a, #042e41, #053449, #053950, #053f58, #004d63, #005c6d, #006a74, #278472, #629a65, #a4aa5a, #ecb365);
+                i{
+                    margin-right: 4rem;
+                    background-color:map-get($map: $colores-pagina, $key:titulos);
+                    padding: 1rem;
+                    border-radius: 5rem;
+                    font-size: 3.2rem;
+                    box-shadow: inset 1px 1px 10px #657e7e;
+                }
+                span{
+                    font-size: 2rem;
+                    margin-right:1rem;
+                    font-family: $tipografia-general;
+                }
+            }
+        }
+        .mapa{
+            border: solid 2px black;
+            border-radius: 1rem;
+            margin: 3rem;
+            iframe{
+                width: 100%;
+                height: 30rem;
+                border-radius: 1rem;
+                box-shadow: 5px 5px 5px black;
+            }
+        }
+    }
+}
+// responsive
+@include sm(){
+    main{
+        #contacto{
+            .hero{
+                h2{
+                    font-size: 4rem;
+                }
+            }
+        }
+    }
+}
+@include lg (){
+    main{
+        #contacto {
+            padding-bottom: 5rem;
+            .text_contacto{
+                width: 50%;
+                border: solid 1px aliceblue;
+                box-shadow: none;
+              }
+              .cont_link_map{
+                .link_contacto{
+                    a{
+                        .bton_mail{
+                            transition: $transition;
+                            &:hover{
+                              box-shadow: inset 1px 1px 15px #e5992e;
+                            }
+                        }
+                        .bton_wassap{
+                            transition: $transition;
+                            &:hover{
+                              box-shadow: inset 1px 1px 15px #e5992e;
+                            }
+                        }
+                    }
+                }
+              } 
+        }
+      
+    }
+}

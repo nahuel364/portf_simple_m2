@@ -1,0 +1,61 @@
+// variables
+$tipografia-titulos:'Kanit', sans-serif;
+$tipografia-general:'REM', sans-serif; 
+$transition: all 300ms;
+// maps-gets
+$colores-pagina:(
+principal: #041C32,
+secundario:#04293A,
+terciario:#064663,
+hover: #ECB365,
+titulos: aliceblue,
+);
+// mixin
+@mixin estilos_parrafos {
+    font-size: 2rem;
+    letter-spacing: 3px;
+    color: aliceblue;
+}
+
+@mixin titulos-mayus {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+@mixin  hr_estilo{
+    width: 80%;
+    opacity: 1;
+    color: aliceblue;
+}
+@mixin estilos_hover{
+    color: map-get($map:$colores-pagina, $key:hover);
+    background-color: darkslateblue;
+    transform: scale(1,1);
+}
+
+@mixin cont_flex($f_direction,$a_items,$j_content) {
+    display: flex;
+    flex-direction:$f_direction;
+    align-items:$a_items;
+    justify-content:$j_content;
+}
+// medidas media query
+@mixin sm($sm:360px){
+    @media screen and (max-width:$sm){
+        @content;
+    }
+}
+@mixin md($md:768px){
+    @media screen and (min-width:$md){
+        @content;
+    }
+}
+@mixin lg($lg:992px){
+    @media screen and (min-width:$lg){
+        @content;
+    }
+}
+@mixin xl($xl:1200px){
+    @media screen and (min-width:$xl){
+        @content;
+    }
+}

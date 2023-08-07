@@ -1,0 +1,73 @@
+.bton_container{
+    position: fixed;
+    bottom: 1rem;
+    right: 2rem;
+    width: 6rem;
+    height: 6rem;
+    z-index: -1;
+    transition: .2s;
+    .bton_top{
+        width: 0rem;
+        height: 0rem;
+        cursor: pointer;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        transition: .2s;
+        background-color: rgba(0, 0, 0,0.6);
+        border-radius: 50%;
+        box-shadow: 3px 2px 5px black;
+        i{
+            position: absolute;
+            font-size: 3rem;
+            top: 48%;
+            left: 50%;
+            transform: translate(-50%,-50%) scale(0);
+            transition: .2s;
+            color: aliceblue;    
+        }
+    }
+}
+.show{
+    z-index: 10;
+}
+.show .bton_top{
+    animation: popup .3s ease-in-out;
+    width: 6rem;
+    height: 6rem;
+    z-index: 11;
+}
+.show{
+    .bton_top{
+        i{
+            transform: translate(-50%, -50%) scale(1);
+        } 
+    } 
+}
+
+@keyframes popup{
+    0%{
+        width: 0rem;
+        height: 0rem;
+    }
+    50%{
+        width: 8rem;
+        height: 8rem;
+    }
+    100%{
+        width: 6rem;
+        height: 6rem;
+    }
+}
+// responsive
+@include lg(){
+    .bton_container{
+        .bton_top{
+            &:hover{
+                background:#f79c0e ;
+            }
+        }
+      
+    }
+}
