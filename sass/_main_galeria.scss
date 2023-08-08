@@ -37,7 +37,7 @@ main{
         }
         .carousel_retrato{
             padding: 1rem;
-            #carouselExampleFade{
+            #carouselExampleControls{
                 z-index: 0;
                 .carousel-inner{
                     border-radius: 1rem;
@@ -48,18 +48,14 @@ main{
                 .carousel-control-prev{
                     span{
                         i{
-                            font-size: 3rem;
-                            border-radius: 50%;
-                            border: solid 0.5rem black;
+                            font-size: 4rem;
                         }
                     }
                 }
                 .carousel-control-next {
                     span{
                         i{
-                            font-size: 3rem;
-                            border-radius: 50%;
-                            border: solid 0.5rem black;
+                            font-size: 4rem;
                         }
                     }
                 }
@@ -68,7 +64,7 @@ main{
       .carousel_paisaje{
         margin-bottom: 7rem;
         padding: 1rem;
-        #carouselExampleControls{
+        #carouselExample{
             z-index: 0;
             .carousel-inner{
                 border-radius: 1rem;
@@ -79,19 +75,15 @@ main{
             .carousel-control-prev{
                 span{
                     i{
-                        font-size: 3rem;
-                        border-radius: 50%;
-                        border: solid 0.5rem black;
+                        font-size: 4rem;
                     }
                 }
             }
             .carousel-control-next {
                 span{
                     i{
-                        font-size: 3rem;
-                        border-radius: 50%;
-                        border: solid 0.5rem black;
-                    }
+                        font-size: 4rem;
+                  }
                 }
             }
         }
